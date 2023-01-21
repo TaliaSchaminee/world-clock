@@ -6,8 +6,7 @@ function updateTime() {
     let losAngelesTimeElement = losAngelesElement.querySelector(".time");
     let losAngelesTime = moment().tz("America/Los_Angeles");
 
-    losAngelesDateElement.innerHTML =
-      losAngelesTime.format("dddd MMMM Do YYYY");
+    losAngelesDateElement.innerHTML = losAngelesTime.format("MMMM Do YYYY");
     losAngelesTimeElement.innerHTML = losAngelesTime.format(
       "h:mm:ss [<small>]A[</small>]"
     );
@@ -19,7 +18,7 @@ function updateTime() {
     let parisDateElement = parisElement.querySelector(".date");
     let parisTimeElement = parisElement.querySelector(".time");
     let parisTime = moment().tz("Europe/Paris");
-    parisDateElement.innerHTML = parisTime.format("dddd MMMM Do YYYY");
+    parisDateElement.innerHTML = parisTime.format("MMMM Do YYYY");
     parisTimeElement.innerHTML = `${parisTime.format(
       "h:mm:ss"
     )} <small> ${parisTime.format("A")} </small>`;
@@ -31,7 +30,7 @@ function updateTime() {
     let newYorkDateElement = newYorkElement.querySelector(".date");
     let newYorkTimeElement = newYorkElement.querySelector(".time");
     let newYorkTime = moment().tz("America/New_York");
-    newYorkDateElement.innerHTML = newYorkTime.format("dddd MMMM Do YYYY");
+    newYorkDateElement.innerHTML = newYorkTime.format("MMMM Do YYYY");
     newYorkTimeElement.innerHTML = `${newYorkTime.format(
       "h:mm:ss"
     )} <small> ${newYorkTime.format("A")} </small>`;
@@ -50,13 +49,13 @@ function updateCity(event) {
   <div class="city">
           <div>
             <h2>${cityName}</h2>
-            <div class="date">${cityTime.format("dddd MMMM Do YYYY")}</div>
+            <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
           </div>
           <div class="time">${cityTime.format(
             "h:mm:ss"
           )} <small>${cityTime.format("A")} </small></div>
         </div>
-        <a href="index.html"> Back to homepage </a>
+        <a href="index.html" class="backlink">Back to homepage</a>
   `;
 }
 
