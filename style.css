@@ -24,7 +24,7 @@ select {
   font-weight: 600;
   font-size: 14px;
   border-radius: 4px;
-  padding: 15px;
+  padding: 10px;
 }
 
 footer {
@@ -75,12 +75,13 @@ footer strong:hover {
   font-size: 14px;
 }
 .time {
-  font-size: 24px;
+  margin-top: 10px;
+  font-size: 28px;
   font-weight: bold;
 }
 
 .time small {
-  font-size: 20px;
+  font-size: 24px;
   vertical-align: middle;
   line-height: 16px;
 }
