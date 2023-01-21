@@ -19,6 +19,16 @@ function updateTime() {
   parisTimeElement.innerHTML = `${parisTime.format(
     "h:mm:ss"
   )} <small> ${parisTime.format("A")} </small>`;
+
+  // NewYork
+  let newYorkElement = document.querySelector("#new-york");
+  let newYorkDateElement = newYorkElement.querySelector(".date");
+  let newYorkTimeElement = newYorkElement.querySelector(".time");
+  let newYorkTime = moment().tz("America/New_York");
+  newYorkDateElement.innerHTML = newYorkTime.format("dddd MMMM Do YYYY");
+  newYorkTimeElement.innerHTML = `${newYorkTime.format(
+    "h:mm:ss"
+  )} <small> ${newYorkTime.format("A")} </small>`;
 }
 
 updateTime;
